@@ -1,11 +1,16 @@
 # app.py
-from flask import Flask, render_template, request, redirect, flash
+from flask import Flask, render_template, redirect, request, session , flash
+from flask_session import Session
 #Flask 객체 인스턴스 생성
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "ABCD"
 #CORS
 from flask_cors import CORS
 CORS(app)
+#Session
+app.config["SESSION_PERMANENT"] = False
+app.config["SESSION_TYPE"] = "filesystem"
+Session(app)
 # DB
 import pymysql
 import pandas as pd
@@ -42,18 +47,43 @@ def signUp():
             cursor.execute(sql,(id, email, nickname, password))
             db.commit()
             print('success')
-            # #session
-            # db.session.add(usertable)
-            # db.session.commit()
             print(id+email+nickname+password)
         return redirect('/')
 
 # sign in
-@app.route('/api/signIn')
+@app.route('/api/signIn', methods=['GET','POST'])
 def signIn():
-    return 'Welcome ***'
+    if request.method == 'POST':
+        login_info = request.form
+        id = login_info['id']
+        password = login_info['password']
+        cursor = db.cursor()
+        sql = "SELECT * FROM User WHERE id = %s"
+        rows_count = cursor.execute(sql, id)
 
+        if rows_count > 0:
+            user_info =cursor.fetchone()
+            print("user info: ", user_info)
+            if (password == user_info[3]):
+                print("Login Success")
+                #session
+                session["id"] = id
+                session["nickname"] = user_info[2]
+                return redirect('/')
+            else:
+                print("Login Fail")
+            return render_template('signIn.html')
+        else:
+            print('user does not exist')
+            return render_template('signIn.html')
+    return render_template('signIn.html')
 
+# sign in
+@app.route('/api/logout', methods=['GET','POST'])
+def logout():
+    session["id"] = None
+    session["nickname"] =None
+    return redirect('/')
 
 # flask run
 if __name__ == '__main__':

@@ -5,6 +5,14 @@
     <title>Title</title>
 </head>
 <body>
-    <h1>대문 페이지</h1>
+    <strong>Hello World!</strong>
+    {% if session.id %}
+    You are Register {{session.id, session.nickname}}.
+    <a href="/api/logout">Logout</a>
+    {% else %}
+    You are not Register. 
+    <a href="/api/signIn">login</a>.
+    <a href="/api/signUp">join</a>.
+    {% endif %}
 </body>
 </html>
