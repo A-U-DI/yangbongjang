@@ -78,12 +78,32 @@ def signIn():
             return render_template('signIn.html')
     return render_template('signIn.html')
 
-# sign in
+# logout
 @app.route('/api/logout', methods=['GET','POST'])
 def logout():
     session["id"] = None
     session["nickname"] =None
     return redirect('/')
+
+# board
+@app.route('/api/board', methods=['GET','POST'])
+def board():
+    return redirect('/')
+
+
+# post
+@app.route('/api/post', methods=['GET','POST'])
+def post():
+    
+    return redirect('/')
+
+
+
+
+# # 건기식프로젝트
+# @app.route('/api/sendintake', methods=['GET','POST'])
+# def test():
+#     return request.data
 
 # flask run
 if __name__ == '__main__':
