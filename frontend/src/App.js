@@ -1,3 +1,4 @@
+import React from 'react';
 import Main from './page/Main';
 import Post from './page/Post';
 import {Route} from "react-router-dom"
@@ -5,8 +6,7 @@ import {Route} from "react-router-dom"
 function App() {
   return (
     <div>
-      <Main/>
-      <Route path="/" component={Main} exact/>
+      <Route path="/" component={Main}/>
       <Route path="/post" component={Post} />
     </div>
   );
