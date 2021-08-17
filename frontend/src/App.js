@@ -6,7 +6,7 @@ import {Route} from "react-router-dom"
 function App() {
   return (
     <div>
-      <Route path="/" component={Main}/>
+      <Route path="/" component={Main} exact/>
       <Route path="/post" component={Post} />
     </div>
   );
