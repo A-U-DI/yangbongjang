@@ -20,10 +20,13 @@ button {
   margin-top: 2%;
 }
 .header-left {
-  margin-left: 1%;
+  margin-left: 0;
+  margin-right: auto;
 }
 .header-right {
-  margin-left: 70%;
+  margin-left: auto;
+  margin-right: 0;
+  /* margin-left: 70%; */
 }
 .list {
   width: 25px;
@@ -88,7 +91,6 @@ button {
 .footer {
   background-color: yellow;
 }
-
 /* Post.js */
 
 .post-location {
@@ -111,26 +113,25 @@ button {
   border: 1px solid;
 }
 
-/* Sidebar.js */
-.side-bar {
-  height: 100% !important;
+.signInFoam{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 40px;
+  margin: 0 0 8px;
+  padding: 5px 39px 5px 11px;
+  border: solid 1px #dadada;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.foam{
+  margin-top: 100px;
+  padding: 20px;
+}
+
+.container{
   display: flex;
-  flex-direction: column;
-  border-right: 1px solid;
-  border-radius: 0;
-  border-color: rgba(64, 194, 133, 0.693);
-  background-color: rgb(255, 255, 255);
-  transition: 0.8s ease;
-}
-.toggle-menu {
-  height: 50px;
-  border-top-right-radius: 10rem;
-  border-bottom-right-radius: 9rem;
-  width: 10px;
-  position: absolute;
-  outline: none;
-  z-index: 1;
-  background-color: rgba(64, 194, 133, 0.693);
-  border-color: rgba(64, 194, 133, 0.693);
-  border-left: 0;
-}
+  flex-direction: row;
+  align-items: flex-start
+  }
