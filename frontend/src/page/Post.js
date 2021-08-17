@@ -3,7 +3,7 @@ import hamburger from "../css/hamburger.png";
 import magglass from "../css/magglass.png";
 import "../index.css";
 
-const Post = () => {
+const Post = (props) => {
     const [title,setTitle] = useState('');
 
     const onChangeTitle = (e) => {
@@ -39,7 +39,7 @@ const Post = () => {
                     <input name="title" value={title} placeholder="제목" size="100" style={{margin: "1%"}}
                     onChange={onChangeTitle}/>
                 </div>
-                <div className="post-write">게시글</div>
+                <div className="post-write">Rich Editor 들어갈 자리</div>
                 <button className="post-uploadBtn">(임시)이미지 올리기</button> 
                 <button className="post-uploadBtn">게시글 올리기</button>
             </div>

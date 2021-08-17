@@ -1,7 +1,7 @@
 import React from 'react';
 import Main from './page/Main';
 import Post from './page/Post';
-import {Route} from "react-router-dom"
+import {Route} from "react-router-dom";
 
 function App() {
   return (
