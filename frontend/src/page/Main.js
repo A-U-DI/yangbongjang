@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import hamburger from "../css/hamburger.png";
 import magglass from "../css/magglass.png";
 import "../index.css";
+import Sidebar from '../component/Sidebar';
 
 const Main = () => {
     const [sidebarStatus, setSidebarStatus] = useState(false);
@@ -12,6 +13,7 @@ const Main = () => {
         <div>
         <div className="header">
             <div className="header-left">
+
             <button onClick={onClickSidebar}><img className="list" src={hamburger}/></button>
             <button className="logo">양봉장</button>
             </div>
