@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import hamburger from "../css/hamburger.png";
 import magglass from "../css/magglass.png";
 import "../index.css";
-import Sidebar from '../component/Sidebar';
 
 const Main = () => {
     const [sidebarStatus, setSidebarStatus] = useState(false);
