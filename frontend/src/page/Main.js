@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import hamburger from "../css/hamburger.png";
 import magglass from "../css/magglass.png";
 import "../index.css";
+import Sidebar from '../component/Sidebar';
 
 const Main = () => {
     const [sidebarStatus, setSidebarStatus] = useState(false);
     const onClickSidebar = () => {
         sidebarStatus ? setSidebarStatus(false) : setSidebarStatus(true);
+        
     }
     return(
         <div>
@@ -22,8 +24,9 @@ const Main = () => {
             </div>
         </div>
         <br/><hr size="2"></hr>
-
-        <div className="body">
+        <div className="body">        
+        {sidebarStatus ? <div className="Sidebar-active>"><Sidebar/></div> 
+        : <div className="Sidebar-inactive>"></div>}
             <div className="main">
                 <div className="notice">{sidebarStatus}</div>
                 <div className="sub">
