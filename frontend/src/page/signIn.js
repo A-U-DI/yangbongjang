@@ -3,16 +3,13 @@ import hamburger from "../css/hamburger.png";
 import magglass from "../css/magglass.png";
 import "../index.css";
 
-const signIn = () => {
+const SignIn = () => {
 return(
     <div className="header">
         <div className="header">
             <div className="header-left">
             <button><img className="list" src={hamburger}/></button>
-            
-            <Link to='/Main.js'> 
             <button className="logo">양봉장</button>
-            </Link>
             </div>
             <div className="header-right">
             <button><img className="search" src={magglass}/></button>
@@ -39,4 +36,4 @@ return(
 )
 }
 
-export default signIn;
+export default SignIn;

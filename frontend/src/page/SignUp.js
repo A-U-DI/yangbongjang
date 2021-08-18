@@ -8,7 +8,7 @@ return(
     <div className="header">
         <div className="header">
             <div className="header-left">
-            <button><img className="list" src={hamburger}/></button>
+            <button><img className="list" src={hamburger}/></button> 
             <button className="logo">양봉장</button>
             </div>
             <div className="header-right">

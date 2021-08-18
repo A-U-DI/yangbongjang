@@ -12,9 +12,7 @@ const Main = () => {
         <div>
         <div className="header">
             <div className="header-left">
-
             <button onClick={onClickSidebar}><img className="list" src={hamburger}/></button>
-            <button><img className="list" src={hamburger}/></button>
             <button className="logo">양봉장</button>
             </div>
             <div className="header-right">
