@@ -20,10 +20,13 @@ button {
   margin-top: 2%;
 }
 .header-left {
-  margin-left: 1%;
+  margin-left: 0;
+  margin-right: auto;
 }
 .header-right {
-  margin-left: 70%;
+  margin-left: auto;
+  margin-right: 0;
+  /* margin-left: 70%; */
 }
 .list {
   width: 25px;
@@ -88,7 +91,6 @@ button {
 .footer {
   background-color: yellow;
 }
-
 /* Post.js */
 
 .post-location {
@@ -110,7 +112,6 @@ button {
   width: 45%;
   border: 1px solid;
 }
-
 .common-table {
   width: 80%;
   margin: 0 auto;
@@ -145,6 +146,17 @@ button {
   border: solid 1px #dadada;
   background: #fff;
   box-sizing: border-box;
+}
+
+.foam {
+  margin-top: 100px;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
 }
 
 .foam {

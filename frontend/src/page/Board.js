@@ -38,6 +38,7 @@ const Board = () => {
                 </select>
                 <input type="text" id="search" name="search" placeholder="검색"/>
                     <button className="searchIcon">검색</button>
+
             </div>
         </div>
 
@@ -77,13 +78,9 @@ const Board = () => {
         </div>
 
         <div className="footer">
-            <p>문의는 포도가 먹고시푼뎅~</p>
+          <p>문의는 포도가 먹고시푼뎅~</p>
         </div>
         </div>
     );
-
 }
-
-
-
 export default Board;
