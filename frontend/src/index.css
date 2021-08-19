@@ -76,22 +76,24 @@ a:hover {
   background-color: white;
 }
 .body {
-  position: relative;
-  z-index: 1;
+  /*가로 정렬*/
   display: flex;
   justify-content: center;
-  margin: 0%;
+}
+.Sidebar {
+  position: absolute;
+  margin: 0% 0% 0% -92%;
+  width: 8.5%;
 }
 .main {
-  margin-top: 2%;
+  margin: 2% 2% 2% 0%;
   width: 70%;
-  height: 600px;
+  height: 50%;
 }
 .advertise {
   margin-top: 2%;
-  margin-left: 1%;
-  width: 12%;
-  height: 575px;
+  width: 10%;
+  height: 580px;
   border: 1px solid;
 }
 .notice {
@@ -197,21 +199,13 @@ a:hover {
   align-items: flex-start;
 }
 
-/* Sidebar.js */
-.Sidebar-active {
-  width: 16%;
-  height: 100%;
-  position: absolute;
-  left: -100px;
-}
-.Sidebar-inactive {
-  width: 16%;
-  height: 100%;
-  visibility: hidden;
+/* Searchbar.js */
+.Sidebar-text {
+  border: none;
+  text-align: center;
 }
 .Sidebar-body {
   width: 100%;
-  background-color: #dadada;
   text-align: center;
 }
 .Sidebar-li {
