@@ -199,19 +199,18 @@ a:hover {
 
 /* Sidebar.js */
 .Sidebar-active {
-  width: 18%;
+  width: 16%;
   height: 100%;
-  position: relative;
-  z-index: 1;
+  position: absolute;
+  left: -100px;
 }
 .Sidebar-inactive {
-  width: 18%;
+  width: 16%;
   height: 100%;
   visibility: hidden;
 }
 .Sidebar-body {
-  width: 18%;
-  height: 100%;
+  width: 100%;
   background-color: #dadada;
   text-align: center;
 }

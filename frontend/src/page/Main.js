@@ -1,14 +1,13 @@
 import React, { useState } from "react";
-import hamburger from "../css/hamburger.png";
 import magglass from "../css/magglass.png";
 import "../index.css";
 import Sidebar from '../component/Sidebar';
+import hamburger from "../css/hamburger.png";
 
 const Main = () => {
     const [sidebarStatus, setSidebarStatus] = useState(false);
     const onClickSidebar = () => {
         sidebarStatus ? setSidebarStatus(false) : setSidebarStatus(true);
-        
     }
     return(
         <div>
@@ -28,7 +27,7 @@ const Main = () => {
         {sidebarStatus ? <div className="Sidebar-active>"><Sidebar/></div> 
         : <div className="Sidebar-inactive>"></div>}
             <div className="main">
-                <div className="notice">{sidebarStatus}</div>
+                <div className="notice">공지</div>
                 <div className="sub">
                     <div className="gallery">갤러리</div>
                     <div className="hot">실시간 인기글</div>

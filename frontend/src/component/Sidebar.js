@@ -7,15 +7,14 @@ const navLinks = [
 
 const Sidebar = () => {
     return(
-        <div className="Sidebar-body">               
+        <nav className="Sidebar-body">
             {navLinks.map(({ url, name }) => (
               <li className="Sidebar-li">
                 <a href={url}>{name}</a>
               </li>
               ))}
-        </div>
+        </nav>
     );
-
 }
 
 export default Sidebar;
