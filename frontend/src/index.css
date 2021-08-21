@@ -139,6 +139,18 @@ a:hover {
   width: 45%;
   border: 1px solid;
 }
+/* Sidebar.js */
+.Sidebar-text {
+  border: none;
+  text-align: center;
+}
+.Sidebar-body {
+  width: 100%;
+}
+.Sidebar-li {
+  list-style: none;
+  padding-left: 0px;
+}
 .common-table {
   width: 80%;
   margin: 0 auto;
