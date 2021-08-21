@@ -49,7 +49,6 @@ a:hover {
 .header-right {
   margin-left: auto;
   margin-right: 0;
-  /* margin-left: 70%; */
 }
 .list {
   width: 25px;
@@ -120,6 +119,7 @@ a:hover {
 .footer {
   background-color: yellow;
 }
+
 /* Post.js */
 
 .post-location {
@@ -165,6 +165,21 @@ a:hover {
   padding: 10px 5px;
 }
 
+/* Sidebar.js */
+
+.Sidebar-text {
+  border: none;
+  text-align: center;
+}
+.Sidebar-body {
+  width: 100%;
+  text-align: center;
+}
+.Sidebar-li {
+  list-style: none;
+  padding-left: 0px;
+}
+
 .signInFoam {
   position: relative;
   overflow: hidden;
@@ -193,22 +208,58 @@ a:hover {
   padding: 20px;
 }
 
-.container {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+#btn_group {
+  margin-top: 20%;
+  text-align: center;
 }
 
-/* Searchbar.js */
-.Sidebar-text {
-  border: none;
+#btn1 {
+  display: inline;
+  margin-right: 2%;
+}
+
+#btn2 {
+  display: inline;
+  margin-left: 2%;
+}
+
+.title {
+  margin-top: 5%;
   text-align: center;
 }
-.Sidebar-body {
-  width: 100%;
-  text-align: center;
+
+.form-group {
 }
-.Sidebar-li {
-  list-style: none;
-  padding-left: 0px;
+
+.form-control {
+  display: block;
+  margin-bottom: 15px;
+  width: 300px;
+  height: 30px;
+  font-size: 20px;
+}
+
+.input {
+  margin-top: 5%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -150px;
+  margin-top: -15px;
+}
+
+.login {
+  margin-top: 5%;
+  text-align: center;
+  /*   
+  margin-bottom: 15px;
+  width : 300px;
+  height : 30px;
+  font-size : 20px;
+  margin-top: 5%;
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin-left:-150px;
+  margin-top:-15px; */
 }

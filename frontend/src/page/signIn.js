@@ -1,15 +1,14 @@
 import React from "react";
+import hamburger from "../css/hamburger.png";
 import magglass from "../css/magglass.png";
 import "../index.css";
-import axios from 'axios';
-
 
 const SignIn = () => {
 return(
     <div className="header">
         <div className="header">
             <div className="header-left">
-            <button><img className="list"/></button>
+            <button><img className="list" src={hamburger}/></button>
             <button className="logo">양봉장</button>
             </div>
             <div className="header-right">
