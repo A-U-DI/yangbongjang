@@ -49,7 +49,6 @@ a:hover {
 .header-right {
   margin-left: auto;
   margin-right: 0;
-  /* margin-left: 70%; */
 }
 .list {
   width: 25px;
@@ -76,22 +75,24 @@ a:hover {
   background-color: white;
 }
 .body {
-  position: relative;
-  z-index: 1;
+  /*가로 정렬*/
   display: flex;
   justify-content: center;
-  margin: 0%;
+}
+.Sidebar {
+  position: absolute;
+  margin: 0% 0% 0% -92%;
+  width: 8.5%;
 }
 .main {
-  margin-top: 2%;
+  margin: 2% 2% 2% 0%;
   width: 70%;
-  height: 600px;
+  height: 50%;
 }
 .advertise {
   margin-top: 2%;
-  margin-left: 1%;
-  width: 12%;
-  height: 575px;
+  width: 10%;
+  height: 580px;
   border: 1px solid;
 }
 .notice {
@@ -118,6 +119,7 @@ a:hover {
 .footer {
   background-color: yellow;
 }
+
 /* Post.js */
 
 .post-location {
@@ -138,18 +140,6 @@ a:hover {
 .post-uploadBtn {
   width: 45%;
   border: 1px solid;
-}
-/* Sidebar.js */
-.Sidebar-text {
-  border: none;
-  text-align: center;
-}
-.Sidebar-body {
-  width: 100%;
-}
-.Sidebar-li {
-  list-style: none;
-  padding-left: 0px;
 }
 .common-table {
   width: 80%;
@@ -173,6 +163,21 @@ a:hover {
 
 .common-table-column {
   padding: 10px 5px;
+}
+
+/* Sidebar.js */
+
+.Sidebar-text {
+  border: none;
+  text-align: center;
+}
+.Sidebar-body {
+  width: 100%;
+  text-align: center;
+}
+.Sidebar-li {
+  list-style: none;
+  padding-left: 0px;
 }
 
 .signInFoam {
