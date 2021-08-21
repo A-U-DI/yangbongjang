@@ -193,65 +193,22 @@ a:hover {
   padding: 20px;
 }
 
-#btn_group {
-  margin-top: 20%;
-  text-align: center;
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
 }
-/* Sidebar.js */
+
+/* Searchbar.js */
 .Sidebar-text {
   border: none;
   text-align: center;
 }
 .Sidebar-body {
   width: 100%;
-}
-#btn1 {
-  display: inline;
-  margin-right: 2%;
-}
-
-#btn2 {
-  display: inline;
-  margin-left: 2%;
-}
-
-.title {
-  margin-top: 5%;
   text-align: center;
 }
-
-.form-group {
-}
-
-.form-control {
-  display: block;
-  margin-bottom: 15px;
-  width: 300px;
-  height: 30px;
-  font-size: 20px;
-}
-
-.input {
-  margin-top: 5%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: -150px;
-  margin-top: -15px;
-}
-
-.login {
-  margin-top: 5%;
-  text-align: center;
-  /*   
-  margin-bottom: 15px;
-  width : 300px;
-  height : 30px;
-  font-size : 20px;
-  margin-top: 5%;
-  position:absolute;
-  top:50%;
-  left:50%;
-  margin-left:-150px;
-  margin-top:-15px; */
+.Sidebar-li {
+  list-style: none;
+  padding-left: 0px;
 }
