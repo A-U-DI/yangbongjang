@@ -16,16 +16,16 @@ return(
             </div>
         </div>
         <br/><hr size="2"></hr>
-        <div>
+        <div className="input">
             <div className="title">
                 <h1>로그인</h1>
             </div>
             <div className="form-group">
-                <div className="input">
+                
                     <input type="text" className="form-control" id="userEmail" placeholder="이메일 주소" name="userEmail"/>
                     
                     <input type="password" className="form-control" id="password" placeholder="비밀번호" name="password"/>
-                    </div>
+                    
                     <div id="btn_group">
                         
                             <div id="btn1">아이디/비밀번호 찾기
@@ -36,11 +36,11 @@ return(
                             </div>
                         
                     </div>
+                    </div>
                     <div className="login">
                 <button type="submit">로그인</button>
                 </div>
                 </div>
-        </div>
         </div>
 )
 }
