@@ -21,13 +21,13 @@ return(
             </div>
             <div className="form-group">
                 <label for="userEmail">이메일 주소
-                    <input type="text" className="form-control" id="userEmail" placeholder="이메일 주소" name="userEmail"/>
+                    <input type="text" className="form-control" placeholder="이메일 주소"/>
                     </label>
                     <label for="nickname">닉네임/별명
-                    <input type="text" className="form-control" id="nickname" placeholder="닉네임/별명" name="nickname"/>
+                    <input type="text" className="form-control" placeholder="닉네임/별명"/>
                     </label>
                     <label for="password">비밀번호
-                    <input type="password" className="form-control" id="password" placeholder="비밀번호" name="password"/>
+                    <input type="password" className="form-control" placeholder="비밀번호"/>
                     </label>
                 <button type="submit" class="btn btn-warning">제출</button>
                 </div>

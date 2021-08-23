@@ -54,33 +54,21 @@ def signUp():
 @app.route('/api/signIn', methods=['GET','POST'])
 def signIn():
     if request.method == 'POST':
-        login_info = request.form
-        email = login_info['email']
-        password = login_info['password']
+        email = request.form['email']
+        password = request.form['password']
         cursor = db.cursor()
         sql = "SELECT * FROM User WHERE email = %s"
         rows_count = cursor.execute(sql, email)
-
         if rows_count > 0:
-            user_info =cursor.fetchone()
-            print("user info: ", user_info)
+            user_info = cursor.fetchone()
             if (password == user_info[3]):
-                print("Login Success")
                 #session
                 session["email"] = email
                 session["nickname"] = user_info[2]
-                return 'success'
-                #return redirect('/')
-            else:
-                print("Login Fail")
-            return "Login Fail"
-            #return render_template('signIn.html')
-        else:
-            print('user does not exist')
-            #return render_template('signIn.html')
-            return "User denied"
-    return "User"
-    #return render_template('signIn.html')
+                return "ACCESS APPROVED"
+        return "ACCESS DENIED"
+    else:
+        return "ACCESS DENIED"
 
 # logout
 @app.route('/api/logout', methods=['GET','POST'])

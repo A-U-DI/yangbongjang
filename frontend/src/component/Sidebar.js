@@ -6,7 +6,7 @@ const navLinks = [
     { url: '/daily', name: '일상' }];
 const board = ["인기", "연예", "일상"];
 
-const Searchbar = () => {
+const Sidebar = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const handleChange = (e) => {
         setSearchTerm(e.target.value);
@@ -26,4 +26,4 @@ const Searchbar = () => {
         </div>
         );
     }
-export default Searchbar;
+export default Sidebar;

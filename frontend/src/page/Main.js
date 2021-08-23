@@ -29,12 +29,9 @@ const Main = () => {
         </div>
         <br/><hr size="2"></hr>
         <div className="body">
-            
             <div className="Sidebar">      
                 {sidebarStatus ? <Sidebar/> : <p/>}
             </div>
-            
-            {/* <div className="Sidebar">하이</div>*/}
             <div className="main">
                 <div className="notice">공지</div>
                 <div className="sub">
