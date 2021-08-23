@@ -1,31 +1,42 @@
-import React, { useState } from "react";
-import hamburger from "../css/hamburger.png";
-import magglass from "../css/magglass.png";
-import "../index.css";
+import React, { useState } from 'react';
+import Sidebar from '../component/Sidebar';
+import hamburger from '../css/hamburger.png';
+import magglass from '../css/magglass.png';
+import '../index.css';
 
 const Main = () => {
-    const [sidebarStatus, setSidebarStatus] = useState(false);
+    const [sidebarStatus, setSidebarStatus] = useState('');
     const onClickSidebar = () => {
         sidebarStatus ? setSidebarStatus(false) : setSidebarStatus(true);
     }
+    const [searchbarStatus, setSearchbarStatus] = useState('');
+    const onClickSearchbar = () => {
+        searchbarStatus ? setSearchbarStatus(false) : setSearchbarStatus(true);
+    }
+
     return(
         <div>
         <div className="header">
             <div className="header-left">
-            <button onClick={onClickSidebar}><img className="list" src={hamburger}/></button>
+            <button><img className="list" src={hamburger} onClick={onClickSidebar}/></button>
             <button className="logo">양봉장</button>
             </div>
             <div className="header-right">
-            <button><img className="search" src={magglass}/></button>
+            <button><img className="search" src={magglass} onClick={onClickSearchbar}/></button>
             <button className="signIn">로그인</button>
             <button className="signUp">회원가입</button>
             </div>
         </div>
         <br/><hr size="2"></hr>
-
         <div className="body">
+            
+            <div className="Sidebar">      
+                {sidebarStatus ? <Sidebar/> : <p/>}
+            </div>
+            
+            {/* <div className="Sidebar">하이</div>*/}
             <div className="main">
-                <div className="notice">{sidebarStatus}</div>
+                <div className="notice">공지</div>
                 <div className="sub">
                     <div className="gallery">갤러리</div>
                     <div className="hot">실시간 인기글</div>
