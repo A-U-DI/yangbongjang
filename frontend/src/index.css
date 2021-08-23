@@ -192,11 +192,6 @@ a:hover {
   box-sizing: border-box;
 }
 
-.foam {
-  margin-top: 100px;
-  padding: 20px;
-}
-
 .container {
   display: flex;
   flex-direction: row;
