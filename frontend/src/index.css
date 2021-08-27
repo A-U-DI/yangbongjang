@@ -220,7 +220,7 @@ a:hover {
 
 /*SignIn.js*/
 
-.login {
+.user-manage {
   width: 100%;
   height: 100%;
   align-items: center;
@@ -234,7 +234,7 @@ a:hover {
   font-weight: 900;
 }
 
-.login-form {
+.user-form {
   margin: 5% 0% 0% 35%;
   width: 30%;
   border: 2px solid;

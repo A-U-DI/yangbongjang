@@ -37,9 +37,9 @@ const SignIn = () => {
         </div>
         <br/><hr size="2"></hr>
 
-        <div className="login">
+        <div className="user-manage">
             <div className="title">로그인</div>
-            <div className="login-form">
+            <div className="user-form">
                 <input type="email" className="input" placeholder="이메일" value={email} onChange={onChangeEmail}/>
                 <input type="password" className="input" placeholder="비밀번호" value={password} onChange={onChangePassword}/>
                 {/* <button>아이디/비밀번호 찾기</button> */}
