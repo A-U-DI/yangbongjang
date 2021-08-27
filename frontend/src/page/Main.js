@@ -3,6 +3,7 @@ import Sidebar from '../component/Sidebar';
 import hamburger from '../css/hamburger.png';
 import magglass from '../css/magglass.png';
 import '../index.css';
+import {Link} from "react-router-dom";
 
 const Main = () => {
     const [sidebarStatus, setSidebarStatus] = useState('');
@@ -23,8 +24,8 @@ const Main = () => {
             </div>
             <div className="header-right">
             <button><img className="search" src={magglass} onClick={onClickSearchbar}/></button>
-            <button className="signIn">로그인</button>
-            <button className="signUp">회원가입</button>
+            <Link to="/signIn"><button className="signIn">로그인</button></Link>
+            <Link to="/signUp"><button className="signUp">회원가입</button></Link>
             </div>
         </div>
         <br/><hr size="2"></hr>

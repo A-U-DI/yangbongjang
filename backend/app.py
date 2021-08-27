@@ -25,30 +25,19 @@ db = pymysql.connect(host='localhost',
 @app.route('/', methods=['GET','POST'])
 def main():
     return render_template('index.html')
+
 # sign up
 @app.route('/api/signUp', methods=['GET','POST'])
 def signUp():
-    if request.method == 'GET':
-        return render_template('signUp.html')
-    elif request.method == 'POST':
-        print('wait')
-        id = request.form.get('userid')
-        email = request.form.get('email')
-        nickname = request.form.get('nickname')
-        password = request.form.get('password')
-        print('data')
-        if not(id and email and nickname and password):
-            flash("회원정보를 모두 기입해주세요.")
-            return render_template('signUp.html')
-        else:
-            print('db wait')
-            cursor = db.cursor()
-            sql = "INSERT INTO User(id,email,nickname,password) VALUES (%s, %s, %s, %s);"
-            cursor.execute(sql,(id, email, nickname, password))
-            db.commit()
-            print('success')
-            print(id+email+nickname+password)
-        return redirect('/')
+    if request.method == 'POST':
+        email = request.form['email']
+        nickname = request.form['nickname']
+        password = request.form['password']
+        cursor = db.cursor()
+        sql = "INSERT INTO User(email,nickname,password) VALUES (%s, %s, %s);"
+        cursor.execute(sql,(email, nickname, password))
+        db.commit()
+        return "USER CREATED"
 
 # sign in
 @app.route('/api/signIn', methods=['GET','POST'])
@@ -73,8 +62,9 @@ def signIn():
 # logout
 @app.route('/api/logout', methods=['GET','POST'])
 def logout():
-    session["id"] = None
-    session["nickname"] =None
+    session["email"] = None
+    session["nickname"] = None
+    session["password"] = None
     return redirect('/')
 
 # board
@@ -82,20 +72,10 @@ def logout():
 def board():
     return redirect('/')
 
-
 # post
 @app.route('/api/post', methods=['GET','POST'])
-def post():
-    
+def post():    
     return redirect('/')
-
-
-
-
-# # 건기식프로젝트
-# @app.route('/api/sendintake', methods=['GET','POST'])
-# def test():
-#     return request.data
 
 # flask run
 if __name__ == '__main__':

@@ -42,9 +42,8 @@ const SignIn = () => {
             <div className="user-form">
                 <input type="email" className="input" placeholder="이메일" value={email} onChange={onChangeEmail}/>
                 <input type="password" className="input" placeholder="비밀번호" value={password} onChange={onChangePassword}/>
-                {/* <button>아이디/비밀번호 찾기</button> */}
-                <Link to="/signUp"><button className="login-btn">회원가입</button></Link> 
-                <Link to="/signIn"><button className="login-btn" onClick={onClick}>로그인</button></Link>
+                <Link to="/" className="form-btn" onClick={onClick}>로그인</Link>
+                <Link to="/signUp" style={{color:'none', textDecoration:'none'}}>아직 회원이 아니신가요? 회원가입하러 가기</Link>
             </div>
         </div>
     </div>
