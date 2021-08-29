@@ -33,19 +33,20 @@ a:active {
 a:hover {
   text-decoration: none;
   color: black;
-  background-color: #f3cc41;
 }
-/* Main.js */
 
+/* Main.js */
 .header {
   display: flex;
   margin-top: 2%;
 }
 .header-left {
+  display: flex;
   margin-left: 0;
   margin-right: auto;
 }
 .header-right {
+  display: flex;
   margin-left: auto;
   margin-right: 0;
 }
@@ -63,14 +64,10 @@ a:hover {
   width: 25px;
   height: 28px;
 }
-.signIn {
+.signUser {
   font-size: 1.1em;
-  border: 0px;
-  background-color: white;
-}
-.signUp {
-  font-size: 1.1em;
-  border: 0px;
+  border: 0%;
+  padding: 0%;
   background-color: white;
 }
 .body {
@@ -120,7 +117,6 @@ a:hover {
 }
 
 /* Post.js */
-
 .post-location {
   width: 100%;
   height: 10%;
@@ -165,7 +161,6 @@ a:hover {
 }
 
 /* Sidebar.js */
-
 .Sidebar-text {
   border: none;
   text-align: center;
@@ -178,17 +173,10 @@ a:hover {
   list-style: none;
   padding-left: 0px;
 }
-
-.signInFoam {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 40px;
-  margin: 0 0 8px;
-  padding: 5px 39px 5px 11px;
-  border: solid 1px #dadada;
-  background: #fff;
-  box-sizing: border-box;
+.Sidebar-li:hover {
+  text-decoration: none;
+  color: black;
+  background-color: #f3cc41;
 }
 
 .container {
@@ -196,29 +184,12 @@ a:hover {
   flex-direction: row;
   align-items: flex-start;
 }
-
 .foam {
   margin-top: 100px;
   padding: 20px;
 }
 
-/* #btn_group {
-  margin-top: 20%;
-  text-align: center;
-}
-
-#btn1 {
-  display: inline;
-  margin-right: 2%;
-}
-
-#btn2 {
-  display: inline;
-  margin-left: 2%;
-} */
-
-/*SignIn.js*/
-
+/*SignIn.js, SignUp.js*/
 .user-manage {
   width: 100%;
   height: 100%;
@@ -236,8 +207,6 @@ a:hover {
   float: left;
   margin: 3% 0% 0% 35%;
   width: 30%;
-  /* border: 2px solid;
-  border-color: #f3cc41; */
 }
 .input {
   margin: 5% 0% 3% 0%;
@@ -247,7 +216,6 @@ a:hover {
   border-bottom: 2px solid;
   border-color: #f3cc41;
 }
-
 .form-btn {
   width: 50%;
   margin: 2% 20% 0% 20%;

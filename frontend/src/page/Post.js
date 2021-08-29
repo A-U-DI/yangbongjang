@@ -4,6 +4,11 @@ import magglass from "../css/magglass.png";
 import "../index.css";
 
 const Post = (props) => {
+    const [sidebarStatus, setSidebarStatus] = useState('');
+    const onClickSidebar = () => {
+        sidebarStatus ? setSidebarStatus(false) : setSidebarStatus(true);
+    }
+    
     const [title,setTitle] = useState('');
 
     const onChangeTitle = (e) => {
