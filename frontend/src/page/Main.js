@@ -3,17 +3,13 @@ import Sidebar from '../component/Sidebar';
 import hamburger from '../css/hamburger.png';
 import magglass from '../css/magglass.png';
 import '../index.css';
+import {Link} from "react-router-dom";
 
 const Main = () => {
     const [sidebarStatus, setSidebarStatus] = useState('');
     const onClickSidebar = () => {
         sidebarStatus ? setSidebarStatus(false) : setSidebarStatus(true);
     }
-    const [searchbarStatus, setSearchbarStatus] = useState('');
-    const onClickSearchbar = () => {
-        searchbarStatus ? setSearchbarStatus(false) : setSearchbarStatus(true);
-    }
-
     return(
         <div>
         <div className="header">
@@ -22,19 +18,16 @@ const Main = () => {
             <button className="logo">양봉장</button>
             </div>
             <div className="header-right">
-            <button><img className="search" src={magglass} onClick={onClickSearchbar}/></button>
-            <button className="signIn">로그인</button>
-            <button className="signUp">회원가입</button>
+            {/* <button><img className="search" src={magglass} onClick={onClickSearchbar}/></button> */}
+            <Link to="/signIn" className="signUser">로그인</Link>
+            <Link to="/signUp" className="signUser">회원가입</Link>
             </div>
         </div>
         <br/><hr size="2"></hr>
         <div className="body">
-            
-            <div className="Sidebar">      
+            <div className="Sidebar">
                 {sidebarStatus ? <Sidebar/> : <p/>}
             </div>
-            
-            {/* <div className="Sidebar">하이</div>*/}
             <div className="main">
                 <div className="notice">공지</div>
                 <div className="sub">

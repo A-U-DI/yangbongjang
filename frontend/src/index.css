@@ -12,21 +12,43 @@ button {
   border: 0px;
   background-color: white;
 }
+a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  padding: 20px;
+}
+a:link {
+  text-decoration: none;
+  color: black;
+}
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+a:active {
+  text-decoration: none;
+  color: grey;
+}
+a:hover {
+  text-decoration: none;
+  color: black;
+}
 
 /* Main.js */
-
 .header {
   display: flex;
   margin-top: 2%;
 }
 .header-left {
+  display: flex;
   margin-left: 0;
   margin-right: auto;
 }
 .header-right {
+  display: flex;
   margin-left: auto;
   margin-right: 0;
-  /* margin-left: 70%; */
 }
 .list {
   width: 25px;
@@ -42,29 +64,31 @@ button {
   width: 25px;
   height: 28px;
 }
-.signIn {
+.signUser {
   font-size: 1.1em;
-  border: 0px;
-  background-color: white;
-}
-.signUp {
-  font-size: 1.1em;
-  border: 0px;
+  border: 0%;
+  padding: 0%;
   background-color: white;
 }
 .body {
+  /*가로 정렬*/
   display: flex;
   justify-content: center;
-  margin-top: 2%;
+}
+.Sidebar {
+  position: absolute;
+  margin: 0% 0% 0% -92%;
+  width: 8.5%;
 }
 .main {
-  width: 75%;
-  height: 600px;
+  margin: 2% 2% 2% 0%;
+  width: 70%;
+  height: 50%;
 }
 .advertise {
-  margin-left: 1%;
-  width: 12%;
-  height: 590px;
+  margin-top: 2%;
+  width: 10%;
+  height: 580px;
   border: 1px solid;
 }
 .notice {
@@ -91,6 +115,7 @@ button {
 .footer {
   background-color: yellow;
 }
+
 /* Post.js */
 
 .post-location {
@@ -135,7 +160,20 @@ button {
 .common-table-column {
   padding: 10px 5px;
 }
+/* Sidebar.js */
 
+.Sidebar-text {
+  border: none;
+  text-align: center;
+}
+.Sidebar-body {
+  width: 100%;
+  text-align: center;
+}
+.Sidebar-li {
+  list-style: none;
+  padding-left: 0px;
+}
 .signInFoam {
   position: relative;
   overflow: hidden;
@@ -159,130 +197,89 @@ button {
   align-items: flex-start;
 }
 
-.foam {
-  margin-top: 100px;
-  padding: 20px;
-}
-
 /* SignIn.js, SignUp.js */
-
-#btn_group {
-  margin-top: 20%;
-  /* 
-  text-align: center; */
-  display: block;
-  width :100%;
-  height : 30%;
-  font-size: 14px;
-  margin-left: -50%;
-}
-
-#btn1{
-  margin-top: 5%;
-  display: inline;
-  margin-right: 5%;
-}
-
-#btn2{
-  margin-top: 5%;
-  display: inline;
-  margin-left: 5%;
-}
-
-.title{
+.user-manage {
+  width: 100%;
+  height: 100%;
+  align-items: center;
   text-align: center;
-  width :160%;
-  margin-left: -80%;
-  margin-top: -50%;
-  margin-bottom: 30%;
 }
 
-.form-group{
+.title {
   margin-top: 5%;
   text-align: center;
-  display: block;
+  font-size: 1.5em;
+  font-weight: 900;
+}
+.user-form {
+  float: left;
+  margin: 3% 0% 0% 35%;
+  width: 30%;
+  /* border: 2px solid;
+  border-color: #f3cc41; */
+}
+.input {
+  margin: 5% 0% 3% 0%;
+  width: 80%;
+  height: 40px;
+  border: none;
+  border-bottom: 2px solid;
+  border-color: #f3cc41;
 }
 
-.form-control{
-  display: block;
-  margin-bottom: 8%;
-  width :160%;
-  height : 40%;
-  font-size : 18px;
-  margin-left: -80%;
+.form-btn {
+  width: 50%;
+  margin: 2% 20% 0% 20%;
+  font-size: 1.1em;
+  font-weight: bold;
+  justify-content: center;
+  background-color: #f3cc41;
+  border-radius: 30px;
 }
 
-.input{
-  margin-top: 5%;
-  position:absolute;
-  top:30%;
-  left:50%;
-  /* margin-left:-150px;
-  margin-top:-15px; */
-}
-
-.login{
-  text-align: center;
-  width :160%;
-  margin-left: -80%;
-  margin-top: 20%;
-  margin-bottom: 30%;
-/*   
-  margin-bottom: 15px;
-  width : 300px;
-  height : 30px;
-  font-size : 20px;
-  margin-top: 5%;
-  position:absolute;
-  top:50%;
-  left:50%;
-  margin-left:-150px;
-  margin-top:-15px; */
-}
-
-label{
+label {
   margin-left: -80%;
   font-size: 80%;
 }
 
 /* Board.js */
 
-.container1{
-  display:grid;
+.container1 {
+  display: grid;
   grid-template-columns: 1fr 8fr 1fr;
   grid-template-rows: 1fr 8.5fr 0.5fr;
   gap: 20px;
 }
 
 .header-left1 {
-  margin-left:0;
-	grid-column-start: 1;
-	grid-column-end: 2;
-	grid-row-start: 1;
-	grid-row-end: 2;
+  margin-left: 0;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
 }
 
-.boardTable{
+.boardTable {
   grid-column-start: 2;
-	grid-column-end: 3;
-	grid-row-start: 2;
-	grid-row-end: 3;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
 }
 
-.boardTitle{
+.boardTitle {
   margin-left: 10%;
   padding: 3%;
 }
 
-.searchBar{
+.searchBar {
   margin-left: 10%;
-  display:grid;
+  display: grid;
   grid-template-rows: 1fr 1fr;
 }
 
-.footer1{
+.footer1 {
   grid-row-start: 3;
-	grid-row-end: 4;
+  grid-row-end: 4;
   grid-column-start: 1;
-	grid-column-end: 4;
+  grid-column-end: 4;
 }
