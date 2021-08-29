@@ -10,11 +10,6 @@ const Main = () => {
     const onClickSidebar = () => {
         sidebarStatus ? setSidebarStatus(false) : setSidebarStatus(true);
     }
-    const [searchbarStatus, setSearchbarStatus] = useState('');
-    const onClickSearchbar = () => {
-        searchbarStatus ? setSearchbarStatus(false) : setSearchbarStatus(true);
-    }
-
     return(
         <div>
         <div className="header">
@@ -23,14 +18,14 @@ const Main = () => {
             <button className="logo">양봉장</button>
             </div>
             <div className="header-right">
-            <button><img className="search" src={magglass} onClick={onClickSearchbar}/></button>
-            <Link to="/signIn"><button className="signIn">로그인</button></Link>
-            <Link to="/signUp"><button className="signUp">회원가입</button></Link>
+            {/* <button><img className="search" src={magglass} onClick={onClickSearchbar}/></button> */}
+            <Link to="/signIn" className="signUser">로그인</Link>
+            <Link to="/signUp" className="signUser">회원가입</Link>
             </div>
         </div>
         <br/><hr size="2"></hr>
         <div className="body">
-            <div className="Sidebar">      
+            <div className="Sidebar">
                 {sidebarStatus ? <Sidebar/> : <p/>}
             </div>
             <div className="main">
