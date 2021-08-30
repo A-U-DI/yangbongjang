@@ -7,7 +7,7 @@ import axios from 'axios';
 import {Link} from "react-router-dom";
 
 const SignUp = () => {
-    const [sidebarStatus, setSidebarStatus] = useState(true);
+    const [sidebarStatus, setSidebarStatus] = useState(false);
     const onClickSidebar = () => {
         sidebarStatus ? setSidebarStatus(false) : setSidebarStatus(true);
     }
@@ -47,7 +47,10 @@ return(
             </div>
         </div>
         <br/><hr size="2"></hr>
-        <div className="Sidebar">{sidebarStatus ? <Sidebar/> : <p/>}</div>
+        <div className="body">
+        <div className="Sidebar">
+            {sidebarStatus ? <Sidebar/> : <p/>}
+        </div>
         <div className="user-manage">
 
             <div className="title">회원가입</div>
@@ -58,6 +61,7 @@ return(
                 <Link Link to="/" className="form-btn" onClick={onClick}>회원가입</Link>
                 <Link to="/signIn">이미 회원이신가요? 로그인하러 가기</Link>
             </div>
+        </div>
         </div>
     </div>
 )}
