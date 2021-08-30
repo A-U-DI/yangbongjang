@@ -225,3 +225,50 @@ a:hover {
   background-color: #f3cc41;
   border-radius: 30px;
 }
+
+label {
+  margin-left: -80%;
+  font-size: 80%;
+}
+
+/* Board.js */
+
+.container1 {
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-rows: 1fr 8.5fr 0.5fr;
+  gap: 20px;
+}
+
+.header-left1 {
+  margin-left: 0;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.boardTable {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.boardTitle {
+  margin-left: 10%;
+  padding: 3%;
+}
+
+.searchBar {
+  margin-left: 10%;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.footer1 {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
