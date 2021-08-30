@@ -1,50 +1,37 @@
-import React from "react";
+import React, { useState } from 'react';
+import Sidebar from '../component/Sidebar';
 import hamburger from "../css/hamburger.png";
 import magglass from "../css/magglass.png";
 import "../index.css";
 import CommonTable from '../component/CommonTable';
 import CommonTableColumn from '../component/CommonTableColumn';
 import CommonTableRow from '../component/CommonTableRow';
+import {Link} from "react-router-dom";
 
 const Board = () => {
-    return(
-        <div className="container1">
-        <div className="header">
-            <div className="header-left">
-            <button><img className="list" src={hamburger}/></button>
-            <button className="logo">양봉장</button>
-            </div>
-            <div className="header-right">
-            <button><img className="search" src={magglass}/></button>
-            <button className="signIn">로그인</button>
-            </div>
-        </div>
-        <br/><hr size="2"></hr>
-
-        <div>
-          <div className="boardTitle">
-            <h2>공지</h2>
-          </div>
-            <div className="searchBar">
-              <div className="tag">
-                <button className="tag1">이슈</button>
-                <button className="tag2">잡담</button>
-                <button className="tag3">후기</button>
-              </div>
-              <div className="searchBoard">
-                <select name="searchSelect">
-                <option value="제목+내용">제목+내용</option>
-                <option value="제목">제목</option>
-                <option value="내용">내용</option>
-                </select>
-                <input type="text" id="search" name="search" placeholder="검색"/>
-                  <button type="submit">검색</button>
-              </div>
-          </div>
-        </div>
-
-        <div className="boardTable">
-        <CommonTable headersName={['글번호', '제목', '등록일', '조회수']}>
+  const [sidebarStatus, setSidebarStatus] = useState(false);
+  const onClickSidebar = () => {
+      sidebarStatus ? setSidebarStatus(false) : setSidebarStatus(true);
+  }
+  return(
+    <div>
+    <div className="header">
+    <div className="header-left">
+    <button><img className="list" src={hamburger} onClick={onClickSidebar}/></button>
+    <button className="logo">양봉장</button>
+    </div>
+    <div className="header-right">
+      <Link to="/signIn" className="signUser">로그인</Link>
+      <Link to="/signUp" className="signUser">회원가입</Link>
+    </div>
+    </div>
+    <br/><hr size="2"></hr>
+    <div className="body">
+      <div className="Sidebar">
+        {sidebarStatus ? <Sidebar/> : <p/>}
+      </div>
+      <div className="boardTable">
+      <CommonTable headersName={['글번호', '제목', '등록일', '조회수']}>
         <CommonTableRow>
           <CommonTableColumn>1</CommonTableColumn>
           <CommonTableColumn>첫번째 게시글입니다.</CommonTableColumn>
@@ -63,25 +50,13 @@ const Board = () => {
           <CommonTableColumn>2020-10-25</CommonTableColumn>
           <CommonTableColumn>1</CommonTableColumn>
         </CommonTableRow>
-        <CommonTableRow>
-          <CommonTableColumn>4</CommonTableColumn>
-          <CommonTableColumn>네번째 게시글입니다.</CommonTableColumn>
-          <CommonTableColumn>2020-10-25</CommonTableColumn>
-          <CommonTableColumn>2</CommonTableColumn>
-        </CommonTableRow>
-        <CommonTableRow>
-          <CommonTableColumn>5</CommonTableColumn>
-          <CommonTableColumn>다섯번째 게시글입니다.</CommonTableColumn>
-          <CommonTableColumn>2020-10-25</CommonTableColumn>
-          <CommonTableColumn>4</CommonTableColumn>
-        </CommonTableRow>
       </CommonTable>
-        </div>
+    </div>
+    </div>
+    <div className="footer">
+      <p>문의는 포도가 먹고시푼뎅~</p>
+    </div>      
+    </div>
+    )}
 
-        <div className="footer1">
-          <p>문의는 포도가 먹고시푼뎅~</p>
-        </div>
-        </div>
-    );
-}
 export default Board;
